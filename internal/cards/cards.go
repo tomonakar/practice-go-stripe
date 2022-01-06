@@ -1,4 +1,4 @@
-package card
+package cards
 
 import (
 	"github.com/stripe/stripe-go/v72"
@@ -53,6 +53,16 @@ func cardErrMessage(code stripe.ErrorCode) string {
 		msg = "カードが拒否されました"
 	case stripe.ErrorCodeExpiredCard:
 		msg = "カードの有効期限が切れています"
+	case stripe.ErrorCodeIncorrectCVC:
+		msg = "カードのCVCが間違っています"
+	case stripe.ErrorCodeIncorrectZip:
+		msg = "カードの郵便番号が間違っています"
+	case stripe.ErrorCodeAmountTooLarge:
+		msg = "支払い金額が大きすぎます"
+	case stripe.ErrorCodeBalanceInsufficient:
+		msg = "残高が不足しています"
+	case stripe.ErrorCodePostalCodeInvalid:
+		msg = "郵便番号が間違っています"
 	default:
 		msg = "カードが拒否されました"
 
