@@ -3,10 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
+	"html/template"
 	"log"
 	"net/http"
 	"os"
-	"text/template"
 	"time"
 )
 
@@ -29,7 +29,7 @@ type config struct {
 type application struct {
 	config        config
 	infoLog       *log.Logger
-	errLog        *log.Logger
+	errorLog      *log.Logger
 	templateCache map[string]*template.Template
 	version       string
 }
