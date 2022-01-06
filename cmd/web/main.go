@@ -69,14 +69,14 @@ func main() {
 	app := &application{
 		config:        cfg,
 		infoLog:       infoLog,
-		errLog:        errorLog,
+		errorLog:      errorLog,
 		templateCache: tc,
 		version:       version,
 	}
 
 	err := app.serve()
 	if err != nil {
-		app.errLog.Println(err)
+		app.errorLog.Println(err)
 	}
 
 }
