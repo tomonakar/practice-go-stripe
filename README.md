@@ -1,5 +1,6 @@
 # 導入パッケージ・ツール
 - [chi](https://github.com/go-chi/chi) : 軽量なルーティングライブラリ
+- [chi/cors](https://github.com/go-chi/cors)：CORSチェックミドルウェア
 - [air](https://github.com/cosmtrek/air) : Live reload for Go apps
 - [stripe-go](https://github.com/stripe/stripe-go)
 - [bootstrap](https://getbootstrap.com/)
